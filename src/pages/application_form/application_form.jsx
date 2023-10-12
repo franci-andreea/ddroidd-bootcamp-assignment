@@ -37,7 +37,7 @@ export default function ApplicationForm() {
     function handleSelectedCountry(e) {
         setCountryName(e.target.value);
         let country = e.target.value.toLowerCase();
-        
+
         if (country === 'united states') {
             setDisableState(false);
 
@@ -49,7 +49,7 @@ export default function ApplicationForm() {
 
             fetch('https://countriesnow.space/api/v0.1/countries/states', requestOptions)
                 .then(response => response.json())
-                .then(response => { setStates(response.data.states); console.log(response); })
+                .then(response => { setStates(response.data.states) })
                 .catch(error => console.error(error));
         }
         else {
@@ -63,7 +63,7 @@ export default function ApplicationForm() {
 
             fetch('https://countriesnow.space/api/v0.1/countries/cities', requestOptions)
                 .then(response => response.json())
-                .then(response => { setCities(response.data); console.log(response); })
+                .then(response => { setCities(response.data) })
                 .catch(error => console.error(error));
         }
     }
@@ -71,7 +71,7 @@ export default function ApplicationForm() {
     function handleSelectedState(e) {
         setStateName(e.target.value);
         let state = e.target.value.toLowerCase();
-        
+
         if (countryName === 'united states') {
             let requestOptions = {
                 method: 'POST',
@@ -81,7 +81,7 @@ export default function ApplicationForm() {
 
             fetch('https://countriesnow.space/api/v0.1/countries/state/cities', requestOptions)
                 .then(response => response.json())
-                .then(response => { setCities(response.data); console.log(response); })
+                .then(response => { setCities(response.data) })
                 .catch(error => console.error(error));
         }
     }
@@ -95,10 +95,8 @@ export default function ApplicationForm() {
         const validPhoneNumber = new RegExp("^(\\+4|)?(0(\\s|)?7[0-8]{1}[0-9]{1}|02[0-9]{2}|03[0-9]{2}){1}?(\\s|)?([0-9]{3}(\\s|)){2}$");
 
         if (!validPhoneNumber.test(phoneNumber)) {
-            console.log('invalid phone number!!!!');
             phoneError = 'Wrong number format';
             setFoundErrors(true);
-            console.log(foundErrors);
 
             return;
         }

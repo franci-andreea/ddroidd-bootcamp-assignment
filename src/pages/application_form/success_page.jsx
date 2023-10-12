@@ -7,7 +7,6 @@ import './success_page.scss'
 export default function SuccessPage() {
     
     const user = useLocation().state;
-    console.log(useLocation().state);
 
     return(
         <div>
