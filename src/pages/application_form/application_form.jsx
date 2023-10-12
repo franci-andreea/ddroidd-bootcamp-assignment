@@ -197,7 +197,7 @@ export default function ApplicationForm() {
                                 <span>{phoneError}</span>
                             </div>
                         }
-                        <input type='submit' value='Join Us' className='join-us-button' />
+                        <input type='submit' value='Join Us' className='join-us-button' id='join-us-application-form' />
                     </div>
                 </form>
             </div>
