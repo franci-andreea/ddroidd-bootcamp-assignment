@@ -1,8 +1,7 @@
-# React + Vite
+# ddroidd Winter Bootcamp Technical Test
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project contains 3 simple web pages realized with the following technologies:
+- [ReactJS](https://react.dev/) with [Vite](https://vitejs.dev/)
+- HTML & CSS for styling
+The project also includes:
+- [Countries & Cities API](https://documenter.getpostman.com/view/1134062/T1LJjU52#intro)
